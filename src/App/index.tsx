@@ -10,14 +10,14 @@ import Navbar from '../components/navbar';
 import Possibility from '../components/possibility';
 import What from '../components/what';
 
-import { Container, Box } from './styles';
+import { Container } from './styles';
 
 const App: React.FC = () => (
   <Container>
-    <Box>
+    <div className="box">
       <Navbar />
       <Header />
-    </Box>
+    </div>
     <Brand />
     <What />
     <Features />
