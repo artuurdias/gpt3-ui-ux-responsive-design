@@ -3,7 +3,7 @@ import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 
 import logo from '../../assets/logo.svg';
 
-import { Container, NavbarLinks, NavbarSign, Menu, NavbarMenuContainer } from './styles';
+import { Container, NavbarLinks, Menu, MenuContainer } from './styles';
 
 const Navbar: React.FC = () => {
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
@@ -22,16 +22,16 @@ const Navbar: React.FC = () => {
           <p><a href="#blog">Library</a></p>
         </div>
       </NavbarLinks>
-      <NavbarSign>
+      <div className="sign">
         <p>Sign in</p>
         <button>Sign up</button>
-      </NavbarSign>
+      </div>
       <Menu>
         {toggleMenu
           ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
           : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />}
         {toggleMenu && (
-          <NavbarMenuContainer>
+          <MenuContainer>
             <div>
               <p><a href="#home">Home</a></p>
               <p><a href="#wgpt3">What is GPT3?</a></p>
@@ -39,11 +39,11 @@ const Navbar: React.FC = () => {
               <p><a href="#features">Case Studies</a></p>
               <p><a href="#blog">Library</a></p>
             </div>
-            <div className="sign">
+            <div className="menu-sign">
               <p>Sign in</p>
               <button type="button">Sign up</button>
             </div>
-          </NavbarMenuContainer>
+          </MenuContainer>
         )}
       </Menu>
     </Container>

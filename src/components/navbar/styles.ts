@@ -14,6 +14,42 @@ export const Container = styled.div`
     @media screen and (max-width: 550px) {
         padding: 2rem;
     }
+
+    .sign {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        p {
+            color: #fff;
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25px;
+            text-transform: capitalize;
+
+            margin: 0 1rem;
+            cursor: pointer;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            color: #fff;
+            background: #FF4820;
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        @media screen and (max-width: 550px) {
+            display: none;
+        }
+    }
 `;
 
 export const NavbarLinks = styled.div`
@@ -53,43 +89,7 @@ export const NavbarLinks = styled.div`
     }
 `;
 
-export const NavbarSign = styled.div`
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    p {
-        color: #fff;
-        font-family: var(--font-family);
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 25px;
-        text-transform: capitalize;
-
-        margin: 0 1rem;
-        cursor: pointer;
-    }
-
-    button {
-        padding: 0.5rem 1rem;
-        color: #fff;
-        background: #FF4820;
-        font-family: var(--font-family);
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 25px;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-
-    @media screen and (max-width: 550px) {
-        display: none;
-    }
-`;
-
-export const NavbarMenuContainer = styled.div`
+export const MenuContainer = styled.div`
     color: #fff;
     font-family: var(--font-family);
     font-weight: 500;
@@ -148,7 +148,7 @@ export const NavbarMenuContainer = styled.div`
         border-radius: 5px;
     }
 
-    .sign {
+    .menu-sign {
         display: none;
 
         @media screen and (max-width: 550px) {
